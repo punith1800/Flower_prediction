@@ -1,38 +1,215 @@
-# Iris Flower Classification
+# 🌸 Iris Flower Prediction System
 
-College data mining mini-project with a short Python script and an editable Word report.
+**Machine Learning Based Iris Flower Classification**
 
-## Project files
+## 📌 Project Overview
 
-- `main.py` — complete runnable Python program.
-- `Iris_Flower_Classification_Report.docx` — college-style project report, including results and setup steps.
+The **Iris Flower Prediction System** is a Machine Learning-based web application that predicts the species of an Iris flower based on its physical measurements.
 
-## Run in VS Code on Windows
+The system uses a Machine Learning classification algorithm trained on the famous Iris dataset to identify three different flower species:
 
-1. Install Python 3 and Visual Studio Code. Add the Microsoft **Python** extension to VS Code.
-2. Extract the downloaded project ZIP to a normal folder.
-3. In VS Code, click **File > Open Folder**, then select the extracted folder.
-4. Click **Terminal > New Terminal**.
-5. Run `py -m pip install scikit-learn` to install the only extra package.
-6. Run `py main.py`.
-7. Read the species names, accuracy, confusion matrix, classification report, and sample prediction in the terminal.
+- Iris Setosa
+- Iris Versicolor
+- Iris Virginica
 
-If the `py` command is unavailable, try `python -m pip install scikit-learn` and `python main.py` instead. Use **Python: Select Interpreter** in VS Code if the correct Python environment is not selected.
+Users can enter flower measurements through a simple web interface and receive an instant prediction.
 
-## Method
+## 🎯 Project Objectives
 
-The program loads scikit-learn's built-in Iris dataset, containing 150 flowers across 3 species and 4 flower measurements. It divides the records into 80% training and 20% testing, fits a maximum-depth-3 Decision Tree, and evaluates the held-out test set.
+- Develop a simple Machine Learning prediction system.
+- Understand the fundamentals of supervised learning.
+- Classify Iris flower species based on input measurements.
+- Build an interactive web interface for predictions.
+- Understand the complete workflow of data preprocessing, model training, and prediction.
 
-The final sample `[5.1, 3.5, 1.4, 0.2]` contains measurements in this order:
+## 🚀 Key Features
 
-1. Sepal length (centimetres)
-2. Sepal width (centimetres)
-3. Petal length (centimetres)
-4. Petal width (centimetres)
+- User-friendly web interface.
+- Input flower measurements manually.
+- Predict Iris flower species instantly.
+- Machine Learning-based classification.
+- Dataset preprocessing and model training.
+- Accurate and fast prediction results.
+- Beginner-friendly implementation.
 
-Replace these four numbers to test another hypothetical flower measurement. This is an educational classifier trained on a small, classic dataset, so a high test accuracy is not a guarantee of performance on photographs or other plant species.
+## 🛠️ Technologies Used
 
-## Dataset and documentation
+| Technology | Purpose |
+|---|---|
+| Python | Core programming language |
+| Machine Learning | Flower classification |
+| Scikit-learn | Model training and prediction |
+| Pandas | Dataset handling |
+| NumPy | Numerical operations |
+| HTML5 | Webpage structure |
+| CSS3 | User interface design |
+| Flask | Backend web framework |
+| VS Code | Development environment |
 
-- scikit-learn built-in Iris dataset: https://scikit-learn.org/stable/modules/generated/sklearn.datasets.load_iris.html
-- scikit-learn DecisionTreeClassifier: https://scikit-learn.org/stable/modules/generated/sklearn.tree.DecisionTreeClassifier.html
+## 🌺 Iris Dataset
+
+The project uses the Iris dataset, which contains 150 flower samples belonging to three species.
+
+Each flower is classified using four input features:
+
+| Feature | Description |
+|---|---|
+| Sepal Length | Length of the sepal in cm |
+| Sepal Width | Width of the sepal in cm |
+| Petal Length | Length of the petal in cm |
+| Petal Width | Width of the petal in cm |
+
+### Iris Flower Species
+
+1. **Setosa** – Typically has smaller petals.
+2. **Versicolor** – Has medium-sized petals.
+3. **Virginica** – Generally has larger petals.
+
+## 📂 Project Structure
+
+```text
+Iris-Flower-Prediction/
+│
+├── app.py
+├── model.py
+├── train_model.py
+├── iris.csv
+├── iris_model.pkl
+├── requirements.txt
+│
+├── templates/
+│   └── index.html
+│
+├── static/
+│   └── style.css
+│
+└── README.md
+```
+
+*Note: Modify the structure according to your actual project files.*
+
+## ⚙️ Installation & Setup
+
+Follow these steps to run the project locally.
+
+### Step 1: Clone the Repository
+
+```bash
+git clone YOUR_GITHUB_REPOSITORY_URL
+```
+
+### Step 2: Navigate to the Project Folder
+
+```bash
+cd Iris-Flower-Prediction
+```
+
+### Step 3: Create a Virtual Environment
+
+```bash
+python -m venv venv
+```
+
+Activate it on Windows:
+
+```bash
+venv\Scripts\activate
+```
+
+### Step 4: Install Dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+### Step 5: Run the Application
+
+```bash
+python app.py
+```
+
+### Step 6: Open in Browser
+
+```text
+http://127.0.0.1:5000/
+```
+
+## 🔍 How It Works
+
+The application follows these steps:
+
+1. User enters the four flower measurements.
+2. The frontend sends the input to the Python backend.
+3. The backend processes the input.
+4. The trained Machine Learning model predicts the flower species.
+5. The predicted flower name is displayed on the webpage.
+
+## 🧠 Machine Learning Algorithm
+
+The project can use the **K-Nearest Neighbors (KNN)** classification algorithm or another suitable classifier.
+
+The model learns patterns from the Iris dataset and predicts the flower species based on the input measurements.
+
+### Prediction Inputs
+
+- Sepal Length
+- Sepal Width
+- Petal Length
+- Petal Width
+
+### Prediction Output
+
+One of the following:
+
+- Iris Setosa
+- Iris Versicolor
+- Iris Virginica
+
+## 📸 Application Preview
+
+Add your project screenshots here:
+
+```markdown
+![Iris Prediction Home Page](screenshots/home.png)
+
+![Prediction Result](screenshots/result.png)
+```
+
+## 🔮 Future Enhancements
+
+- Improve prediction performance through model comparison.
+- Add graphical data visualization.
+- Display prediction confidence.
+- Add a responsive mobile-friendly interface.
+- Deploy the application on AWS or other cloud platforms.
+- Add more machine learning classification algorithms.
+
+## 👨‍💻 Project Developers
+
+**Punith V A**
+
+**Team Members:**
+- Umesh D G
+- Shashank A
+- Mohan A
+- Shreyas R A
+
+**Department:** Computer Science
+
+**College:** Best Degree College
+
+**University:** Bengaluru North University
+
+## 🎓 Academic Project
+
+This project is developed as a Computer Science mini-project to demonstrate practical knowledge of Python programming, Machine Learning, data preprocessing, and web application development.
+
+## ⭐ Support
+
+If you find this project useful, give this repository a ⭐ on GitHub!
+
+---
+
+**Iris Flower Prediction System**
+
+*Learn. Train. Predict. Innovate.* 🌸
